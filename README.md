@@ -15,10 +15,10 @@ Quick Start
 ------------------
 
 ```
-$ yarn install
+yarn install
 ```
-* Update postgres Connection string in config (local.json)
 
+* Update postgres Connection string in config (local.json)
 
 Starting service
 ------------------
@@ -28,6 +28,7 @@ Starting service
 
 Acceptance Criteria
 --------------------
+
 1. REST API endpoint for creating a client object. [Done]
 2. REST API endpoint for reading client object. [Done]
 3. REST API endpoint for reading all clients. [Done]

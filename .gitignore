@@ -61,3 +61,5 @@ typings/
 .env
 /logs/service.log
 .vscode
+*.DS_Store
+README.md

@@ -2,7 +2,7 @@ const db = require('../helpers/postgres');
 const queries = require('./sql/queries');
 const crypto = require('crypto');
 
-class ClientModel {
+class clientModel {
 	// Returns a list of clients
 	static async getList(search = {}) {
 		return db.any(queries.clients.get, search);
@@ -26,10 +26,15 @@ class ClientModel {
 		return db.none(queries.clients.deleteOne, { clientId });
 	}
 
+	// Update Client
+	static async updateOne(clientId, firstName) {
+		return db.none(queries.clients.updateOne, { firstName, clientId });
+	}
+
 	// Hash client data
 	static hashClient(clientData) {
 		return crypto.createHash('sha256').update(JSON.stringify(clientData)).digest('base64');
 	}
 }
 
-module.exports = ClientModel;
+module.exports = clientModel;

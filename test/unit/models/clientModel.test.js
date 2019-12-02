@@ -1,6 +1,6 @@
 const chai = require('chai');
 const td = require('testdouble');
-const ClientModel = require('../../../src/models/ClientModel');
+const ClientModel = require('../../../src/models/clientModel');
 
 const { expect } = chai;
 

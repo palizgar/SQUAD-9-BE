@@ -8,12 +8,18 @@ const { apiRoutes } = require('./routes');
 const { routeErrorHandler, routeNotFoundHandler } = require('./middleware/errorHandlers');
 const { asyncRouteHandler } = require('./middleware/routeHandlers');
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('../public/swagger.json');
+
 const app = express();
 
 // Register Application middleware
 app.use(express.json());
 app.use(requestLogger);
 app.use(express.static(path.join(__dirname, '../public')));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+
 // Register Application routes
 apiRoutes(app);
 

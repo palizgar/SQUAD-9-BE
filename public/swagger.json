@@ -2,7 +2,8 @@
   "swagger": "2.0",
   "info": {
     "title": "myjar-test-task-service.js",
-    "description": "MYJAR test-task-service.js"
+    "description": "MYJAR test-task-service.js",
+    "version":"1.0.0"
   },
   "host": "test.myjar.com",
   "schemes": [
@@ -17,7 +18,7 @@
   "basePath": "/api/myjar-test-task-service/",
   "paths": {
     "/api/v1/clients": {
-      "GET": {
+      "get": {
         "summary": "Gets all clients in database",
         "responses": {
           "200": {
@@ -28,7 +29,7 @@
 					}
         }
 			},
-			"POST": {
+      "post": {
         "summary": "ClientModel",
         "responses": {
           "200": {
@@ -38,7 +39,7 @@
       }
 		},
 		"/api/v1/clients/{id}": {
-      "GET": {
+      "get": {
 				"summary": "ClientModel",
 				"parameters": [
 					{
@@ -53,12 +54,12 @@
             "description": "Returns client data"
           }
         }
-			},
-			"DELETE": {
-				"summary": "ClientModel",
+      },
+			"delete": {
+				"summary": "Delete a client data",
 				"parameters": [
 					{
-						"name": "id",
+ 						"name": "id",
 						"in": "path",
 						"description": "Client UUID v4",
 						"required": true
@@ -67,6 +68,30 @@
         "responses": {
           "200": {
             "description": "Returns ok and client is deleted if exists"
+          }
+        }
+      }
+    },
+    "/api/v1/clients/{id}?firstName":{
+      "put": {
+				"summary": "Update client data",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Client UUID v4",
+						"required": true
+          },
+          {
+						"name": "firstName",
+						"in": "query",
+						"description": "New First Name",
+						"required": true
+					}
+				],
+        "responses": {
+          "200": {
+            "description": "Update Successful"
           }
         }
       }
