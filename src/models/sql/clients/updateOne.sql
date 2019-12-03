@@ -1,6 +1,6 @@
 update
     public.clients
 set
-    firstname = ${ firstName }
+    firstname = ${ firstname }
 where
     id = ${clientId}

@@ -72,7 +72,7 @@
         }
       }
     },
-    "/api/v1/clients/{id}?firstName":{
+    "/api/v1/clients/{id}?firstname":{
       "put": {
 				"summary": "Update client data",
 				"parameters": [
@@ -83,7 +83,7 @@
 						"required": true
           },
           {
-						"name": "firstName",
+						"name": "firstname",
 						"in": "query",
 						"description": "New First Name",
 						"required": true

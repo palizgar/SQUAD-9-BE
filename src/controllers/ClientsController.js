@@ -38,8 +38,8 @@ class ClientsController {
 	// UPDATE - Update a client first name
 	static async updateOne(req) {
 		const { clientId } = req.params;
-		const { firstName } = req.query;
-		await clientModel.updateOne(clientId, firstName);
+		const { firstname } = req.query;
+		await clientModel.updateOne(clientId, firstname);
 		return { message: 'update success' };
 	}
 }

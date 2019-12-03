@@ -27,8 +27,8 @@ class clientModel {
 	}
 
 	// Update Client
-	static async updateOne(clientId, firstName) {
-		return db.none(queries.clients.updateOne, { firstName, clientId });
+	static async updateOne(clientId, firstname) {
+		return db.none(queries.clients.updateOne, { firstname, clientId });
 	}
 
 	// Hash client data
