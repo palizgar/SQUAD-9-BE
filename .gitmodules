@@ -1,0 +1,3 @@
+[submodule "FE-REPO-SubModule"]
+	path = FE-REPO-SubModule
+	url = https://palizgar@github.com/palizgar/SQUAD-9-FE.git
