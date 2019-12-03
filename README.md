@@ -32,5 +32,5 @@ Acceptance Criteria
 1. REST API endpoint for creating a client object. [Done]
 2. REST API endpoint for reading client object. [Done]
 3. REST API endpoint for reading all clients. [Done]
-4. REST API endpoint for updating client object. [TODO]
+4. REST API endpoint for updating client object. [Done]
 5. REST API endpoint for deleting a client object. [Done]
